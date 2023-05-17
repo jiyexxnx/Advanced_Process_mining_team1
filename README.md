@@ -11,6 +11,9 @@ This repository provides implementation for reporducing our project. We did some
 
 # System Information
 We ran the experiment both on Windows and Mac, the detail information are revealed in the [sys_info](/sys_info)
+We followed Author github's system requirement. (Windows)
+However, for Mac M1 chip, it's better to switch to tensorflow -mackos==2.9 and tensorflow-metal==0.5.0
+There's no ProM version for Mac OS.
 
 # Step-by-step instructions
 You first need to generate LPMs feature for each event log, then you can choose between one-hot encoding based methods or embedding layers to encode and train the LSTM model as described step by step below:
@@ -129,11 +132,5 @@ We had experiment on "Production" dataset and the results can be found in the fo
 2. One-hot: [OneHot_LSTM/checkpoints/Production](OneHot_LSTM/checkpoints/Production)
 3. Embedding: [Embedding_LSTM/datasets/production](Embedding_LSTM/datasets/production)
     
-
-
-# System information
-- We followed Author github's system requirement. (Windows)
-- However, for Mac M1 chip, it's better to switch to tensorflow -mackos==2.9 and tensorflow-metal==0.5.0
-- There's no ProM version for Mac OS.
 
     
