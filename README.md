@@ -10,10 +10,10 @@ Encoding High-Level Control-Flow Construct Information for Process Outcome Predi
 This repository provides implementation for reporducing our project. We did some minor change of the code to adapt our environment.
 
 # System Information
-We ran the experiment both on Windows and Mac, the detail information are revealed in the [sys_info](/sys_info)
-We followed Author github's system requirement. (Windows)
-However, for Mac M1 chip, it's better to switch to tensorflow -mackos==2.9 and tensorflow-metal==0.5.0
-There's no ProM version for Mac OS.
+- We ran the experiment both on Windows and Mac, the detail information are revealed in the [sys_info](/sys_info)
+- We followed Author github's system requirement. (Windows)
+- However, for Mac M1 chip, it's better to switch to tensorflow -mackos==2.9 and tensorflow-metal==0.5.0
+- There's no ProM version for Mac OS.
 
 # Step-by-step instructions
 You first need to generate LPMs feature for each event log, then you can choose between one-hot encoding based methods or embedding layers to encode and train the LSTM model as described step by step below:
