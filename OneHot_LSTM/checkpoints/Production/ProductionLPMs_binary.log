@@ -1,8 +1,8 @@
 
 
 Best parameters:
-{'batch_size': 32, 'layers': 1, 'learning_rate': 2.1951171622602056e-05, 'opt': 'RMSprop', 'rate': 0.054015060320481374, 'units': 15}
-Best Model parameters number: 2536
-Best Time taken: 87.2480
-Best validation loss: 0.6338
-Hyperparameter Optimization time taken: 3258.4980
+{'batch_size': 32, 'layers': 1, 'learning_rate': 1.3108961546089696e-05, 'opt': 'RMSprop', 'rate': 0.08742186005683962, 'units': 10}
+Best Model parameters number: 1491
+Best Time taken: 143.7760
+Best validation loss: 0.6284
+Hyperparameter Optimization time taken: 3459.8176

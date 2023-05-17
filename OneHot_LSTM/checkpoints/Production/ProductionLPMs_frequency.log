@@ -1,0 +1,8 @@
+
+
+Best parameters:
+{'batch_size': 16, 'layers': 1, 'learning_rate': 4.2185695586437655e-05, 'opt': 'adam', 'rate': 0.034130719458869065, 'units': 10}
+Best Model parameters number: 1491
+Best Time taken: 105.3495
+Best validation loss: 0.6353
+Hyperparameter Optimization time taken: 3604.4756

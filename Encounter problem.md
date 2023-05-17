@@ -53,4 +53,30 @@ Python LPMDetection_Complete.py --LPMs_dir "./sepsis" --raw_log_file "./datasets
 Python HPO_embedding_args.py --data_dir "./datasets" --raw_data "../datasets/sepsis_eventlog_processed.csv" --out_name "sepsis" --LPMs True --Only_LPMs False --max_length 36 --results "/results_lpms_act_sepsis.txt"
 
 Python Embedding_Run.py --data_dir "./datasets" --raw_data "../datasets/sepsis_eventlog_processed.csv" --out_name "sepsis" --LPMs True --Only_LPMs False --max_length 36 --batch_size 8 --learning_rate 0.00001 --opt "Adam" --rate 0.01 --units 10 --layers 2
+------
+Python HPO_embedding_args.py --data_dir "./datasets" --raw_data "../datasets/Production.csv" --out_name "production" --LPMs True --Only_LPMs True --max_length 36 --results "/test_results_lpms_act.txt"
 
+==========
+production
+Python LPMDetection_Complete.py --LPMs_dir "./production_lpm" --raw_log_file "./datasets/production_2.xes" --processed_log_file "./datasets/Production.csv" --Min_prefix_size 2 --Max_prefix_size 36
+
+Python HPO_embedding_args.py --data_dir "./datasets" --raw_data "../datasets/Production.csv" --out_name "production" --LPMs True --Only_LPMs True --max_length 36 --results "/production_results_lpms_act.txt"
+
+Python HPO_embedding_args.py --data_dir "./datasets" --raw_data "../datasets/Production.csv" --out_name "production" --LPMs True --Only_LPMs False --max_length 36 --results "/production_results_lpms_act_true.txt"
+
+=========
+
+===========
+Rerun one hot - production 16.05
+
+Python HP_Optimization.py --dataset "Production" --data_dir "./datasets" --checkpoint_dir "./checkpoints" --LPMs True --encoding_type "W" --LPMs_type "LPMs_binary"
+
+Python HP_Optimization.py --dataset "Production" --data_dir "./datasets" --checkpoint_dir "./checkpoints" --LPMs True --encoding_type "C" 
+====================
+Rerun embedding - production 17.05
+
+Python HPO_embedding_args.py --data_dir "./datasets" --raw_data "../datasets/Production.csv" --out_name "production" --LPMs True --Only_LPMs False --max_length 36 --results "/results_lpms_act.txt"
+
+Python HPO_embedding_args.py --data_dir "./datasets" --raw_data "../datasets/Production.csv" --out_name "production" --LPMs True --Only_LPMs True --max_length 36 --results "/results_lpms_only.txt"
+
+Python HPO_embedding_args.py --data_dir "./datasets" --raw_data "../datasets/Production.csv" --out_name "production" --LPMs False --max_length 36 --results "/results_act_only.txt"

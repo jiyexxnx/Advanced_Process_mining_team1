@@ -1,0 +1,30 @@
+
+
+Best parameters:
+{'batch_size': 8, 'embedding_lpms': 9, 'layers': 2, 'learning_rate': 3.6702111077829445e-05, 'opt': 'RMSprop', 'rate': 0.26459617855567086, 'units': 10}
+Best Model parameters number: 1660
+Best Time taken: 69.5227
+Best validation loss: 0.6928
+Hyperparameter Optimization time taken: 3184.9604
+              precision    recall  f1-score   support
+
+         0.0    0.54060   1.00000   0.70181       233
+         1.0    0.00000   0.00000   0.00000       198
+
+    accuracy                        0.54060       431
+   macro avg    0.27030   0.50000   0.35090       431
+weighted avg    0.29225   0.54060   0.37940       431
+
+
+*******************************
+Testing Accuracy: 0.5406
+Testing F-Score: 0.7018
+Testing AUC: 0.5000
+Testing Kappa: 0.0000
+Testing Confusion matrix:
+ [[233   0]
+ [198   0]]
+Weighted f1 score: 0.3794
+Recall: 0.5406
+Precision: 0.2923
+*******************************

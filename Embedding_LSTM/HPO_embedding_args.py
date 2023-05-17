@@ -343,8 +343,8 @@ if LPMs:
     if Only_LPMs:
         space = {'rate': hp.uniform('rate', 0.01, 0.3),
                  'units': scope.int(hp.quniform('units', 10, 100, 5)),
-                 'batch_size': hp.choice('batch_size', [8, 16, 32, 64, 128, 256,]),
-                 'layers': scope.int(hp.choice('layers', [1, 2, 3, 4])),
+                 'batch_size': hp.choice('batch_size', [8, 16, 32, ]),
+                 'layers': scope.int(hp.quniform('layers', 1, 4, 1)),
                  'opt': hp.choice('opt', ['adam', 'RMSprop']),
                  'learning_rate': hp.uniform('learning_rate', 0.00001, 0.0001),
                  'embedding_lpms': scope.int(hp.quniform('embedding_lpm', 3, 20, 1))
@@ -352,8 +352,8 @@ if LPMs:
     else:
         space = {'rate': hp.uniform('rate', 0.01, 0.3),
                  'units': scope.int(hp.quniform('units', 10, 100, 5)),
-                 'batch_size': hp.choice('batch_size', [8, 16, 32, 64, 128, 256,]),
-                 'layers': scope.int(hp.choice('layers', [1, 2, 3, 4])),
+                 'batch_size': hp.choice('batch_size', [8, 16, 32, ]),
+                 'layers': scope.int(hp.quniform('layers', 1, 4, 1)),
                  'opt': hp.choice('opt', ['adam', 'RMSprop']),
                  'learning_rate': hp.uniform('learning_rate', 0.00001, 0.0001),
                  'embedding_act': scope.int(hp.quniform('embedding_act', 5, 30, 1)),
@@ -362,8 +362,8 @@ if LPMs:
 else:
     space = {'rate': hp.uniform('rate', 0.01, 0.3),
              'units': scope.int(hp.quniform('units', 10, 100, 5)),
-             'batch_size': hp.choice('batch_size', [8, 16, 32, 64, 128, 256,]),
-             'layers': scope.int(hp.choice('layers', [1, 2, 3, 4])),
+             'batch_size': hp.choice('batch_size', [8, 16, 32, ]),
+             'layers': scope.int(hp.quniform('layers', 1, 4, 1)),
              'opt': hp.choice('opt', ['adam', 'RMSprop']),
              'learning_rate': hp.uniform('learning_rate', 0.00001, 0.0001),
              'embedding_act': scope.int(hp.quniform('embedding_act', 5, 30, 1)),
@@ -377,7 +377,7 @@ best_time = 0
 best_numparameters = 0
 
 trials = Trials()
-best = fmin(embedding_model, space, algo=tpe.suggest, max_evals=50, trials=trials, rstate=np.random.default_rng(142)) 
+best = fmin(embedding_model, space, algo=tpe.suggest, max_evals=50, trials=trials, rstate=np.random.default_rng(142))
 best_model = trials.results[np.argmin([r['loss'] for r in trials.results])]['model']
 best_params = trials.results[np.argmin([r['loss'] for r in trials.results])]['params']
 selection_time = time.time() - start_selection_time

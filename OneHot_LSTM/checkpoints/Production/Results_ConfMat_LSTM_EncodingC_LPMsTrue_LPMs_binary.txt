@@ -1,0 +1,18 @@
+Running time is 143.77603 
+[[338 147]
+ [211 170]]
+              precision    recall  f1-score   support
+
+           0    0.61566   0.69691   0.65377       485
+           1    0.53628   0.44619   0.48711       381
+
+    accuracy                        0.58661       866
+   macro avg    0.57597   0.57155   0.57044       866
+weighted avg    0.58074   0.58661   0.58045       866
+
+Accuracy = 0.58661 
+F1_Score = 0.58045 
+Precision = 0.58074 
+Recall = 0.58661 
+Cohen Kappa = 0.14573 
+AUC = 0.60936 

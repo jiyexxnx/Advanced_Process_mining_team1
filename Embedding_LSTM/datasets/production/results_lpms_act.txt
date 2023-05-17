@@ -1,30 +1,30 @@
 
 
 Best parameters:
-{'batch_size': 256, 'embedding_lpms': 14, 'layers': 2, 'learning_rate': 3.728116274596859e-05, 'opt': 'adam', 'rate': 0.15313464646383743, 'units': 60}
-Best Model parameters number: 47115
-Best Time taken: 22.5128
-Best validation loss: 0.6929
-Hyperparameter Optimization time taken: 2631.0989
+{'batch_size': 16, 'embedding_lpms': 12, 'layers': 2, 'learning_rate': 1.576984651591921e-05, 'opt': 'RMSprop', 'rate': 0.08038167306364911, 'units': 15}
+Best Model parameters number: 3568
+Best Time taken: 38.0162
+Best validation loss: 0.6926
+Hyperparameter Optimization time taken: 2370.6249
               precision    recall  f1-score   support
 
-         0.0    0.53383   1.00000   0.69607       434
-         1.0    0.00000   0.00000   0.00000       379
+         0.0    0.54060   1.00000   0.70181       233
+         1.0    0.00000   0.00000   0.00000       198
 
-    accuracy                        0.53383       813
-   macro avg    0.26691   0.50000   0.34804       813
-weighted avg    0.28497   0.53383   0.37158       813
+    accuracy                        0.54060       431
+   macro avg    0.27030   0.50000   0.35090       431
+weighted avg    0.29225   0.54060   0.37940       431
 
 
 *******************************
-Testing Accuracy: 0.5338
-Testing F-Score: 0.6961
+Testing Accuracy: 0.5406
+Testing F-Score: 0.7018
 Testing AUC: 0.5000
 Testing Kappa: 0.0000
 Testing Confusion matrix:
- [[434   0]
- [379   0]]
-Weighted f1 score: 0.3716
-Recall: 0.5338
-Precision: 0.2850
+ [[233   0]
+ [198   0]]
+Weighted f1 score: 0.3794
+Recall: 0.5406
+Precision: 0.2923
 *******************************
