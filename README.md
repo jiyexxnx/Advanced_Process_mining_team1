@@ -5,15 +5,11 @@
 Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction
 - Paper: https://ieeexplore.ieee.org/document/9980737
 - Author github: https://github.com/MozhganVD/LPMforPPM
+- Datasets: https://github.com/irhete/predictive-monitoring-benchmark 
 
-Supplementary material for the article *"Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction"* by Mozhgan Vazifehdoostirani, Laura Genga, Remco Dijkman. 
-
-This repository provides implementations for encoding high-level control-flow constructs information for outcome-oriented predictive process monitoring.
+This repository provides implementation for reporducing our project. We did some minor change of the code to adapt our environment.
 To use this repository, you need to discover Local Process Models using LPM miner plugin available in ProM 6.9 and store discovered patterns as petri-nets in .pnml format.
 
-
-# Datasets
-The labeled datasets to do experiments can be found at https://github.com/irhete/predictive-monitoring-benchmark 
 
 # Usage
 
