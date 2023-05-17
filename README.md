@@ -1,8 +1,7 @@
 # Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction
 
-Supplementary material for the article *"Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction"* by Mozhgan Vazifehdoostirani, Laura Genga, Remco Dijkman. 
+This repository is modified copy of https://github.com/MozhganVD/LPMforPPM (Supplementary material for the article *"Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction"* by Mozhgan Vazifehdoostirani, Laura Genga, Remco Dijkman.). In order to replicate their results we implemented several modifications of their code.
 
-This repository provides implementations for encoding high-level control-flow constructs information for outcome-oriented predictive process monitoring.
 To use this repository, you need to discover Local Process Models using LPM miner plugin available in ProM 6.9 and store discovered patterns as petri-nets in .pnml format.
 
 
@@ -104,5 +103,9 @@ You first need to generate LPMs feature for each event log, then you can choose 
 ## Note
 - We assume the input csv file contains the columns named after the xes elements, e.g., concept:name
 - We assume the input event log contains a column named "event_nr" indicating the event orders for each case 
+
+## Additional Notes
+- We run this code both on Windows and Mac OS systems on our local computers.
+- If you use Mac M1 chip, it’s better to switch to tensorflow-macos==2.9 and tensorflow-metal==0.5.0
 
     
