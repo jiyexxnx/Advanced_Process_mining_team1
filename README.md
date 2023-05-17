@@ -10,9 +10,7 @@ Encoding High-Level Control-Flow Construct Information for Process Outcome Predi
 This repository provides implementation for reporducing our project. We did some minor change of the code to adapt our environment.
 
 # System Information
-We ran the experiment both on Windows and Mac, the detail information are revealed in the files:
-1. Windows: 
-2. Mac: 
+We ran the experiment both on Windows and Mac, the detail information are revealed in the [sys_info](/sys_info)
 
 
 # Raw results
