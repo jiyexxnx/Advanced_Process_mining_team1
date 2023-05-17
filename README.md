@@ -57,7 +57,7 @@ for nr_events in range(int(min_length) + 1, int(max_length) + 1):
 ```Python data_processing.py --dataset "Production" --dir_path "./datasets" --raw_log_file "./datasets/eventlog_processed.csv" --Max_length 36 --train_ratio 0.8``` 
 
 > Modify Code
-[line 38 and line 40] - added 'base_case_id'
+- [line 38 and line 40] - added 'base_case_id'
 
 2. Hyperparameter tuning by running ```HP_Optimization.py``` with following flags:
     -  *--dataset*: dataset name (same name as data processing name)
@@ -72,14 +72,12 @@ for nr_events in range(int(min_length) + 1, int(max_length) + 1):
 ```Python HP_Optimization.py --dataset "Production" --dir_path "./datasets" --checkpoint_dir "./checkpoints" --LPMs True --encoding_type "W" --LPMs_type "LPMs_binary"``` 
 
 >Modify Code
-[line 132] -
-# best = fmin(f_lstm_cv, space, algo=tpe.suggest, max_evals=50,
-trials=trials, rstate=np.random.RandomState(seed))
-best = fmin(f_lstm_cv, space, algo=tpe.suggest, max_evals=50,
-trials=trials, rstate=np.random.default_rng(seed))
+- [line 132] 
+- best = fmin(f_lstm_cv, space, algo=tpe.suggest, max_evals=50, trials=trials, rstate=np.random.RandomState(seed))
+- best = fmin(f_lstm_cv, space, algo=tpe.suggest, max_evals=50, trials=trials, rstate=np.random.default_rng(seed))
 
 >Modify Running code "HP_Optimization.py"  
---dir_path  change to --data_dir
+- --dir_path  change to --data_dir
 
 
 
