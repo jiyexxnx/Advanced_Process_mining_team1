@@ -8,22 +8,23 @@ Encoding High-Level Control-Flow Construct Information for Process Outcome Predi
 - Datasets: https://github.com/irhete/predictive-monitoring-benchmark 
 
 This repository provides implementation for reporducing our project. We did some minor change of the code to adapt our environment.
-To use this repository, you need to discover Local Process Models using LPM miner plugin available in ProM 6.9 and store discovered patterns as petri-nets in .pnml format.
 
-# Raw results
-We had experiment on "Production" dataset and the results can find in the following folders:
-1. pnml files generated from ProM 6.9: production_lpm 
-2. One-hot: OneHot_LSTM/checkpoints/Production
-3. Embedding: Embedding_LSTM/datasets/production
+# System Information
+We ran the experiment both on Windows and Mac, the detail information are revealed in the [sys_info](/sys_info)
 
+# Step-by-step instructions
+You first need to generate LPMs feature for each event log, then you can choose between one-hot encoding based methods or embedding layers to encode and train the LSTM model as described step by step below:
 
+<<<<<<< HEAD
 # Usage 
+=======
+1. Use ProM 6.9 to transform raw data from .csv to .xes file and do local process mining and export .pnml (petri net markup language).
+- Note: we couldn't find the function to export as .pnml which the authour suggested so we exported as .apnml instead.
+>>>>>>> 2eb3de3aa89162760400b047eca49d16806519ce
 
-- Install dependencies (Python 3.8.0) :
+2. Install dependencies (Python 3.8.0) :
 
 ```pip install -r requirements.txt```
-
-You first need to generate LPMs feature for each event log, then you can choose between one-hot encoding based methods or embedding layers to encode and train the LSTM model as described step by step below:
 
 ## LPMs Feature Generation
 1. Discover and save LPMs using ProM as .pnml format
@@ -126,11 +127,14 @@ trials=trials, rstate=np.random.default_rng(seed))
     -  *--rate*: dropout rate
     -  *--units*: number of neuron units per layer
     -  *--layers*: number of LSTM layers
+
+# Raw results
+We had experiment on "Production" dataset and the results can be found in the following folders:
+1. pnml files generated from ProM 6.9: [production_lpm](/production_lpm)
+2. One-hot: [OneHot_LSTM/checkpoints/Production](OneHot_LSTM/checkpoints/Production)
+3. Embedding: [Embedding_LSTM/datasets/production](Embedding_LSTM/datasets/production)
     
 
-## Note
-- We assume the input csv file contains the columns named after the xes elements, e.g., concept:name
-- We assume the input event log contains a column named "event_nr" indicating the event orders for each case 
 
 # System information
 - We followed Author github's system requirement. (Windows)
