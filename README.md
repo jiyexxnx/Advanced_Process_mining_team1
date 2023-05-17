@@ -17,9 +17,9 @@ We ran the experiment both on Windows and Mac, the detail information are reveal
 
 # Raw results
 We had experiment on "Production" dataset and the results can be found in the following folders:
-1. pnml files generated from ProM 6.9: production_lpm 
-2. One-hot: OneHot_LSTM/checkpoints/Production
-3. Embedding: Embedding_LSTM/datasets/production
+1. pnml files generated from ProM 6.9: [production_lpm](/production_lpm)
+2. One-hot: [OneHot_LSTM/checkpoints/Production](OneHot_LSTM/checkpoints/Production)
+3. Embedding: [Embedding_LSTM/datasets/production](Embedding_LSTM/datasets/production)
 
 
 # Usage
