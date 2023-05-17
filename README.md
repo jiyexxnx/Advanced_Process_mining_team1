@@ -15,12 +15,9 @@ We ran the experiment both on Windows and Mac, the detail information are reveal
 # Step-by-step instructions
 You first need to generate LPMs feature for each event log, then you can choose between one-hot encoding based methods or embedding layers to encode and train the LSTM model as described step by step below:
 
-<<<<<<< HEAD
 # Usage 
-=======
 1. Use ProM 6.9 to transform raw data from .csv to .xes file and do local process mining and export .pnml (petri net markup language).
 - Note: we couldn't find the function to export as .pnml which the authour suggested so we exported as .apnml instead.
->>>>>>> 2eb3de3aa89162760400b047eca49d16806519ce
 
 2. Install dependencies (Python 3.8.0) :
 
