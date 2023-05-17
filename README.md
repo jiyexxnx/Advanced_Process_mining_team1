@@ -1,5 +1,5 @@
 # Advanced Process Mining Group1 Project
-# Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction
+## Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction
 Paper: https://ieeexplore.ieee.org/document/9980737
 Author github: https://github.com/MozhganVD/LPMforPPM
 
