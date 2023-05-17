@@ -8,10 +8,15 @@ Encoding High-Level Control-Flow Construct Information for Process Outcome Predi
 - Datasets: https://github.com/irhete/predictive-monitoring-benchmark 
 
 This repository provides implementation for reporducing our project. We did some minor change of the code to adapt our environment.
-To use this repository, you need to discover Local Process Models using LPM miner plugin available in ProM 6.9 and store discovered patterns as petri-nets in .pnml format.
+
+# System Information
+We ran the experiment both on Windows and Mac, the detail information are revealed in the files:
+1. Windows: 
+2. Mac: 
+
 
 # Raw results
-We had experiment on "Production" dataset and the results can find in the following folders:
+We had experiment on "Production" dataset and the results can be found in the following folders:
 1. pnml files generated from ProM 6.9: production_lpm 
 2. One-hot: OneHot_LSTM/checkpoints/Production
 3. Embedding: Embedding_LSTM/datasets/production
