@@ -1,5 +1,5 @@
 # Advanced Process Mining Group1 Project
-
+Poeysie Chuah, I-Chen Hsieh, Jiyeon Lee, Mariam Arustashvili, Alexander Gabitashvili, Hanchun Hua
 
 # Paper
 Encoding High-Level Control-Flow Construct Information for Process Outcome Prediction
@@ -17,7 +17,7 @@ We had experiment on "Production" dataset and the results can find in the follow
 3. Embedding: Embedding_LSTM/datasets/production
 
 
-# Usage
+# Usage 
 
 - Install dependencies (Python 3.8.0) :
 
@@ -39,6 +39,10 @@ You first need to generate LPMs feature for each event log, then you can choose 
 
 ```Python LPMDetection_Complete.py --LPMs_dir "./LPMs" --raw_log_file "./datasets/eventlog.xes" --processed_log_file "./datasets/eventlog_processed.csv" --Min_prefix_size 2 --Max_prefix_size 36``` 
 
+> Modify Code
+- [line 30] Cast float object to int
+for nr_events in range(int(min_length) + 1, int(max_length) + 1):
+
 ## One-hot encoding (Classic/ Wrapped)
 1. Prepare dataset by running ```data_processing.py``` with following flags:
     -  *--dataset*: dataset name
@@ -51,6 +55,9 @@ You first need to generate LPMs feature for each event log, then you can choose 
 
 ```Python data_processing.py --dataset "Production" --dir_path "./datasets" --raw_log_file "./datasets/eventlog_processed.csv" --Max_length 36 --train_ratio 0.8``` 
 
+> Modify Code
+[line 38 and line 40] - added 'base_case_id'
+
 2. Hyperparameter tuning by running ```HP_Optimization.py``` with following flags:
     -  *--dataset*: dataset name (same name as data processing name)
     -  *--data_dir*: path/to/store/processed/data
@@ -62,6 +69,18 @@ You first need to generate LPMs feature for each event log, then you can choose 
 - Example:
 
 ```Python HP_Optimization.py --dataset "Production" --dir_path "./datasets" --checkpoint_dir "./checkpoints" --LPMs True --encoding_type "W" --LPMs_type "LPMs_binary"``` 
+
+>Modify Code
+[line 132] -
+# best = fmin(f_lstm_cv, space, algo=tpe.suggest, max_evals=50,
+trials=trials, rstate=np.random.RandomState(seed))
+best = fmin(f_lstm_cv, space, algo=tpe.suggest, max_evals=50,
+trials=trials, rstate=np.random.default_rng(seed))
+
+>Modify Running code "HP_Optimization.py"  
+--dir_path  change to --data_dir
+
+
 
 3. Run LSTM model with a predifined parameters by running ```Main_LSTM_LPMs.py``` with following flags:
     -  *--dataset*: dataset name (same name as data processing name)
@@ -112,5 +131,10 @@ You first need to generate LPMs feature for each event log, then you can choose 
 ## Note
 - We assume the input csv file contains the columns named after the xes elements, e.g., concept:name
 - We assume the input event log contains a column named "event_nr" indicating the event orders for each case 
+
+# System information
+- We followed Author github's system requirement. (Windows)
+- However, for Mac M1 chip, it's better to switch to tensorflow -mackos==2.9 and tensorflow-metal==0.5.0
+- There's no ProM version for Mac OS.
 
     
